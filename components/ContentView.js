@@ -2,11 +2,13 @@ import {StyleSheet, Text, View} from "react-native";
 import HeaderBar from "./HeaderBar";
 import React from "react";
 
-export default function Home(props) {
+export default function ContentView(props) {
   return (
-    <View style={styles.container}>
+    <View>
       <HeaderBar pageName={"Home"}/>
-      {props.children}
+      <View style={styles.container}>
+        {props.children}
+      </View>
     </View>
   );
 }
@@ -14,6 +16,7 @@ export default function Home(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000000',
+    margin: 15
   },
 });
