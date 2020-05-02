@@ -1,7 +1,6 @@
 import { Text, FlatList, View } from "react-native";
 import { Card, List } from "react-native-paper";
 import React, { useState, useEffect } from "react";
-import ContentView from "../components/ContentView";
 import BasicItem from "../components/BasicItem";
 import HeaderBar from "../components/HeaderBar";
 
