@@ -34,7 +34,7 @@ export default function DrawerContent({ navigation }) {
           focused={selected === "Goals"}
         />
       </Drawer.Section>
-      <Drawer.Section title={"Financial Planning"} style={styles.section}>
+      <Drawer.Section title={"Tools"} style={styles.section}>
         <DrawerItem
           icon={({ color, size }) => (
             <MaterialCommunityIcons
@@ -56,6 +56,50 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Budgeting"}
+          onPress={() => selectItem("CompoundInterest")}
+          focused={selected === "CompoundInterest"}
+        />
+        <DrawerItem
+          icon={({ color, size }) => (
+            <MaterialCommunityIcons
+              color={color}
+              size={size}
+              name={"calculator"}
+            />
+          )}
+          label={"Merge Budgets"}
+          onPress={() => selectItem("CompoundInterest")}
+          focused={selected === "CompoundInterest"}
+        />
+        <DrawerItem
+          icon={({ color, size }) => (
+            <MaterialCommunityIcons color={color} size={size} name={"bank"} />
+          )}
+          label={"Bank Reconciliations"}
+          onPress={() => selectItem("CompoundInterest")}
+          focused={selected === "CompoundInterest"}
+        />
+        <DrawerItem
+          icon={({ color, size }) => (
+            <MaterialCommunityIcons
+              color={color}
+              size={size}
+              name={"google-analytics"}
+            />
+          )}
+          label={"Analytics"}
+          onPress={() => selectItem("CompoundInterest")}
+          focused={selected === "CompoundInterest"}
+        />
+        <DrawerItem
+          icon={({ color, size }) => (
+            <MaterialCommunityIcons
+              color={color}
+              size={size}
+              name={"help-box"}
+            />
+          )}
+          label={"Help & Feedback"}
           onPress={() => selectItem("CompoundInterest")}
           focused={selected === "CompoundInterest"}
         />
