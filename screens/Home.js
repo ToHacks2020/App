@@ -3,6 +3,7 @@ import { Card, List } from "react-native-paper";
 import React, { useState, useEffect } from "react";
 import BasicItem from "../components/BasicItem";
 import HeaderBar from "../components/HeaderBar";
+import HomeHeading from "../components/HomeHeading";
 
 const user = {
   income: {
@@ -43,6 +44,7 @@ export default function Home() {
           renderItem={({ item }) => <BasicItem item={item} />}
           keyExtractor={(item) => item.type}
           numColumns={3}
+          ListHeaderComponent={HomeHeading}
         />
       </View>
     </View>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Text, View, StatusBar, StyleSheet, ScrollView } from "react-native";
 import { DrawerItem } from "@react-navigation/drawer";
-import { Drawer } from "react-native-paper";
+import { Drawer, Avatar } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function DrawerContent({ navigation }) {
@@ -12,6 +12,19 @@ export default function DrawerContent({ navigation }) {
   }
   return (
     <ScrollView style={{ marginTop: StatusBar.currentHeight }}>
+      <View style={{ alignItems: "center", marginTop: 20, marginBottom: 30 }}>
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Avatar.Image
+            size={85}
+            source={{
+              uri: "https://i.stack.imgur.com/l60Hf.png",
+            }}
+          />
+          <View style={{ paddingLeft: 20 }}>
+            <Text style={{ fontSize: 20, fontWeight: "bold" }}>John Doe</Text>
+          </View>
+        </View>
+      </View>
       <Drawer.Section title={"You"} style={styles.section}>
         <DrawerItem
           icon={({ focused, color, size }) => (
