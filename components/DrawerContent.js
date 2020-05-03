@@ -34,7 +34,7 @@ export default function DrawerContent({ navigation }) {
           focused={selected === "Goals"}
         />
       </Drawer.Section>
-      <Drawer.Section title={"Finances"} style={styles.section}>
+      <Drawer.Section title={"Financial Planning"} style={styles.section}>
         <DrawerItem
           icon={({ color, size }) => (
             <MaterialCommunityIcons
@@ -44,6 +44,18 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Compound Interest Calc"}
+          onPress={() => selectItem("CompoundInterest")}
+          focused={selected === "CompoundInterest"}
+        />
+        <DrawerItem
+          icon={({ color, size }) => (
+            <MaterialCommunityIcons
+              color={color}
+              size={size}
+              name={"book-open"}
+            />
+          )}
+          label={"Budgeting"}
           onPress={() => selectItem("CompoundInterest")}
           focused={selected === "CompoundInterest"}
         />
@@ -58,6 +70,30 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Credit Cards"}
+          onPress={() => {}}
+          focused={false}
+        />
+        <DrawerItem
+          icon={({ color, size }) => (
+            <MaterialCommunityIcons
+              color={color}
+              size={size}
+              name={"chart-areaspline"}
+            />
+          )}
+          label={"Stocks"}
+          onPress={() => {}}
+          focused={false}
+        />
+        <DrawerItem
+          icon={({ color, size }) => (
+            <MaterialCommunityIcons
+              color={color}
+              size={size}
+              name={"office-building"}
+            />
+          )}
+          label={"Real Estate"}
           onPress={() => {}}
           focused={false}
         />
