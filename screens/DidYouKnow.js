@@ -7,6 +7,17 @@ export default class didYouKnow extends React.Component {
       <View style={styles.container}>
         <SectionList
           sections={[
+            
+            {
+              title: '5 Richest People In The World',
+              data: [
+                'Jeff Bezos',
+                'Bill Gates',
+                'Bernard Arnault',
+                'Warren Buffet',
+                'Larry Ellison',
+              ],
+            },
             {
               title: 'Top Google Seaches in 2018',
               data: [
@@ -15,16 +26,6 @@ export default class didYouKnow extends React.Component {
                 'Mac Miller',
                 'Stan Lee',
                 'Black Panther',
-              ],
-            },
-            {
-              title: 'Top News Trends of 2018',
-              data: [
-                'World Cup',
-                'Hurricane Florence',
-                'Mega Millions Result',
-                'Royal Wedding',
-                'Election Results',
               ],
             },
             {
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
     paddingBottom: 2,
     paddingLeft: 10,
     paddingRight: 10,
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
     backgroundColor: '#1D2DDA',
