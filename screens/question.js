@@ -103,6 +103,7 @@ export default class Question extends React.Component {
                 <Text style={[this.props.titleStyle]}>
                     {this.props.question}
                 </Text>
+                <br></br>
                 <Text style={[this.props.replyStyle]}>
                     {this.props.reply}
                 </Text>
@@ -154,7 +155,8 @@ Question.defaultProps = {
         fontSize: 15
     },
     titleStyle: {
-        fontSize: 20
+        fontSize: 20,
+        textAlign:"center"
     },
     onClick: null,
 }
