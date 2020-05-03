@@ -32,7 +32,7 @@ const goals = [
   {
     id: 5,
     name: "Save",
-    description: "aaaaaa",
+    description: "Save $1M in chequing account",
     completed: false,
   },
   {
@@ -44,19 +44,19 @@ const goals = [
   {
     id: 7,
     name: "Invest",
-    description: "aaaaaa",
+    description: "Own 2 shares of Google",
     completed: false,
   },
   {
     id: 8,
     name: "Invest",
-    description: "aaaaaa",
+    description: "Own 4 shares of Amazon",
     completed: false,
   },
   {
     id: 9,
     name: "Invest",
-    description: "aaaaaa",
+    description: "Profit $30K from the stock market",
     completed: false,
   },
 ];
