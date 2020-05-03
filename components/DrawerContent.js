@@ -68,8 +68,8 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Budgeting"}
-          onPress={() => selectItem("CompoundInterest")}
-          focused={selected === "CompoundInterest"}
+          onPress={() => selectItem("Budgeting")}
+          focused={selected === "Budgeting"}
         />
         <DrawerItem
           icon={({ color, size }) => (
@@ -80,16 +80,16 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Merge Budgets"}
-          onPress={() => selectItem("CompoundInterest")}
-          focused={selected === "CompoundInterest"}
+          onPress={() => selectItem("MergeBudgets")}
+          focused={selected === "MergeBudgets"}
         />
         <DrawerItem
           icon={({ color, size }) => (
             <MaterialCommunityIcons color={color} size={size} name={"bank"} />
           )}
           label={"Bank Reconciliations"}
-          onPress={() => selectItem("CompoundInterest")}
-          focused={selected === "CompoundInterest"}
+          onPress={() => selectItem("BankReconciliations")}
+          focused={selected === "BankReconciliations"}
         />
         <DrawerItem
           icon={({ color, size }) => (
@@ -100,8 +100,8 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Analytics"}
-          onPress={() => selectItem("CompoundInterest")}
-          focused={selected === "CompoundInterest"}
+          onPress={() => selectItem("Analytics")}
+          focused={selected === "Analytics"}
         />
         <DrawerItem
           icon={({ color, size }) => (
@@ -112,8 +112,8 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Did you Know"}
-          onPress={() => selectItem("CompoundInterest")}
-          focused={selected === "CompoundInterest"}
+          onPress={() => selectItem("Did you Know")}
+          focused={selected === "Did you Know"}
         />
         <DrawerItem
           icon={({ color, size }) => (
@@ -124,8 +124,8 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Help & Feedback"}
-          onPress={() => selectItem("CompoundInterest")}
-          focused={selected === "CompoundInterest"}
+          onPress={() => selectItem("Help")}
+          focused={selected === "Help"}
         />
       </Drawer.Section>
       <Drawer.Section title={"Recommendations"}>
