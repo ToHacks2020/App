@@ -40,6 +40,7 @@ const styles = {
 export default class App extends Component {
     render() {
         return (
+          
             <div>
                 <Faq data={data} styles={styles} />
             </div>
