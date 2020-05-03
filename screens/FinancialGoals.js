@@ -6,40 +6,58 @@ import { Checkbox } from "react-native-paper";
 
 const goals = [
   {
+    id: 1,
     name: "AAAAAAA",
     description: "aaaaaa",
+    completed: true,
   },
   {
+    id: 2,
     name: "AAAAAAA",
     description: "aaaaaa",
+    completed: true,
   },
   {
+    id: 3,
     name: "AAAAAAA",
     description: "aaaaaa",
+    completed: false,
   },
   {
+    id: 4,
     name: "AAAAAAA",
     description: "aaaaaa",
+    completed: true,
   },
   {
+    id: 5,
     name: "AAAAAAA",
     description: "aaaaaa",
+    completed: false,
   },
   {
+    id: 6,
     name: "AAAAAAA",
     description: "aaaaaa",
+    completed: true,
   },
   {
+    id: 7,
     name: "AAAAAAA",
     description: "aaaaaa",
+    completed: false,
   },
   {
+    id: 8,
     name: "AAAAAAA",
     description: "aaaaaa",
+    completed: false,
   },
   {
+    id: 9,
     name: "AAAAAAA",
     description: "aaaaaa",
+    completed: false,
   },
 ];
 
@@ -54,10 +72,11 @@ export default function FinancialGoals() {
             <List.Item
               title={item.name}
               description={item.description}
-              right={() => <Checkbox status={"unchecked"} />}
+              right={() => <Checkbox status={item.completed ? "checked" : "unchecked"} />}
             />
           );
         }}
+        keyExtractor={item => item.id}
       />
       <View style={{ justifyContent: "flex-end", margin: 20 }}>
         <Button
