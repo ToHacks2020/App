@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { TextInput } from "react-native-paper";
+import { TextInput, Button } from "react-native-paper";
 import HeaderBar from "../components/HeaderBar";
 
 export default function CompoundInterest() {
@@ -63,14 +63,19 @@ export default function CompoundInterest() {
             onChangeText={(text) => setInterestRate(text)}
           />
           <View style={styles.result}>
-            <Text
+            {/* <button onClick={() => calculateCompoundInterest()}>
+              Calculate
+            </button> */}
+            {
+              /* <Text
               style={{ fontWeight: "bold", fontSize: 30, textAlign: "center" }}
             >
-              Your retirement account will contain
-            </Text>
-            <Text style={{ fontWeight: "bold", fontSize: 30 }}>
-              ${compoundInterest[1]}
-            </Text>
+              Your Retirement account will contain
+            </Text>*/
+              <Text style={{ fontWeight: "bold", fontSize: 30 }}>
+                ${compoundInterest[1]}
+              </Text>
+            }
           </View>
         </View>
       </View>

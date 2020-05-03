@@ -33,6 +33,18 @@ export default function DrawerContent({ navigation }) {
           onPress={() => selectItem("Goals")}
           focused={selected === "Goals"}
         />
+        <DrawerItem
+          icon={({ color, size }) => (
+            <MaterialCommunityIcons
+              color={color}
+              size={size}
+              name={"format-list-bulleted"}
+            />
+          )}
+          label={"My transactions"}
+          onPress={() => selectItem("Goals")}
+          focused={selected === "Goals"}
+        />
       </Drawer.Section>
       <Drawer.Section title={"Tools"} style={styles.section}>
         <DrawerItem
@@ -88,6 +100,18 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Analytics"}
+          onPress={() => selectItem("CompoundInterest")}
+          focused={selected === "CompoundInterest"}
+        />
+        <DrawerItem
+          icon={({ color, size }) => (
+            <MaterialCommunityIcons
+              color={color}
+              size={size}
+              name={"library-books"}
+            />
+          )}
+          label={"Did you Know"}
           onPress={() => selectItem("CompoundInterest")}
           focused={selected === "CompoundInterest"}
         />
