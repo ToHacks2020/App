@@ -61,6 +61,7 @@ export default function FinancialGoals() {
       />
       <View style={{ justifyContent: "flex-end", margin: 20 }}>
         <Button
+          icon={"playlist-plus"}
           onPress={() => {}}
           mode="contained"
           style={{ height: 50, justifyContent: "center" }}
