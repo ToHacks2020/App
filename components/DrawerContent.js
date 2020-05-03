@@ -17,17 +17,17 @@ export default function DrawerContent({ navigation }) {
           onPress={() => selectItem("Home")}
           focused={selected === "Home"}
         />
+        <DrawerItem
+          label={"Financial Goals"}
+          onPress={() => selectItem("Goals")}
+          focused={selected === "Goals"}
+        />
       </Drawer.Section>
       <Drawer.Section title={"Finances"} style={styles.section}>
         <DrawerItem
-          label={"Info"}
-          onPress={() => selectItem("Info")}
-          focused={selected === "Info"}
-        />
-        <DrawerItem
-          label={"Goals"}
-          onPress={() => selectItem("Goals")}
-          focused={selected === "Goals"}
+          label={"Compound Interest Calculator"}
+          onPress={() => selectItem("CompoundInterest")}
+          focused={selected === "CompoundInterest"}
         />
       </Drawer.Section>
       <Drawer.Section title={"Recommendations"}>

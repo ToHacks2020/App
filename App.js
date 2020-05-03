@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import Home from "./screens/Home.js";
-import FinancialInfo from "./screens/FinancialInfo";
+import CompoundInterest from "./screens/CompoundInterest";
 import FinancialGoals from "./screens/FinancialGoals";
 import DrawerContent from "./components/DrawerContent";
 import { createDrawerNavigator } from "@react-navigation/drawer";
@@ -17,7 +17,7 @@ export default function App() {
         )}
       >
         <Drawer.Screen name={"Home"} component={Home} />
-        <Drawer.Screen name={"Info"} component={FinancialInfo} />
+        <Drawer.Screen name={"CompoundInterest"} component={CompoundInterest} />
         <Drawer.Screen name={"Goals"} component={FinancialGoals} />
       </Drawer.Navigator>
     </NavigationContainer>
