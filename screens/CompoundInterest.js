@@ -27,8 +27,6 @@ export default function CompoundInterest() {
   return (
     <View style={{ flex: 1 }}>
       <HeaderBar pageName={"Compound Interest Calculator"} />
-      <Text></Text>
-      <br></br>
       <Text style={{ fontWeight: "bold", fontSize: 15, textAlign: "center" }}>
         The Compound Interest Calculator Enables you to plan your Retirement
         NestEgg.
