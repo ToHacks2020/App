@@ -5,6 +5,16 @@ import CompoundInterest from "./screens/CompoundInterest";
 import FinancialGoals from "./screens/FinancialGoals";
 import DrawerContent from "./components/DrawerContent";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import MyTransactions from "./screens/MyTransactions";
+import Budgeting from "./screens/Budgeting";
+import MergeBudgets from "./screens/MergeBudgets";
+import BankReconciliations from "./screens/BankReconciliations";
+import Analytics from "./screens/Analytics";
+import DidYouKnow from "./screens/DidYouKnow";
+import Help from "./screens/Help";
+import CreditCardRecommendations from "./screens/CreditCardRecommendations";
+import StockRecommendations from "./screens/StockRecommendations";
+import RealEstateRecommendations from "./screens/RealEstateRecommendations";
 
 const Drawer = createDrawerNavigator();
 
@@ -19,6 +29,16 @@ export default function App() {
         <Drawer.Screen name={"Home"} component={Home} />
         <Drawer.Screen name={"CompoundInterest"} component={CompoundInterest} />
         <Drawer.Screen name={"Goals"} component={FinancialGoals} />
+        <Drawer.Screen name={"Transactions"} component={MyTransactions} />
+        <Drawer.Screen name={"Budgeting"} component={Budgeting} />
+        <Drawer.Screen name={"MergeBudgets"} component={MergeBudgets} />
+        <Drawer.Screen name={"BankReconciliations"} component={BankReconciliations} />
+        <Drawer.Screen name={"Analytics"} component={Analytics} />
+        <Drawer.Screen name={"DidYouKnow"} component={DidYouKnow} />
+        <Drawer.Screen name={"Help"} component={Help} />
+        <Drawer.Screen name={"CreditCardRecommendations"} component={CreditCardRecommendations} />
+        <Drawer.Screen name={"StockRecommendations"} component={StockRecommendations} />
+        <Drawer.Screen name={"RealEstateRecommendations"} component={RealEstateRecommendations} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

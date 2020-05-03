@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, StatusBar, StyleSheet } from "react-native";
+import { Text, View, StatusBar, StyleSheet, ScrollView } from "react-native";
 import { DrawerItem } from "@react-navigation/drawer";
 import { Drawer } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -11,7 +11,7 @@ export default function DrawerContent({ navigation }) {
     navigation.navigate(item);
   }
   return (
-    <View style={{ marginTop: StatusBar.currentHeight }}>
+    <ScrollView style={{ marginTop: StatusBar.currentHeight }}>
       <Drawer.Section title={"You"} style={styles.section}>
         <DrawerItem
           icon={({ focused, color, size }) => (
@@ -42,8 +42,8 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"My transactions"}
-          onPress={() => selectItem("Goals")}
-          focused={selected === "Goals"}
+          onPress={() => selectItem("Transaction")}
+          focused={selected === "Transaction"}
         />
       </Drawer.Section>
       <Drawer.Section title={"Tools"} style={styles.section}>
@@ -112,8 +112,8 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Did you Know"}
-          onPress={() => selectItem("Did you Know")}
-          focused={selected === "Did you Know"}
+          onPress={() => selectItem("DidYouKnow")}
+          focused={selected === "DidYouKnow"}
         />
         <DrawerItem
           icon={({ color, size }) => (
@@ -138,8 +138,8 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Credit Cards"}
-          onPress={() => {}}
-          focused={false}
+          onPress={() => selectItem("CreditCardRecommendations")}
+          focused={selected === "CreditCardRecommendations"}
         />
         <DrawerItem
           icon={({ color, size }) => (
@@ -150,8 +150,8 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Stocks"}
-          onPress={() => {}}
-          focused={false}
+          onPress={() => selectItem("StockRecommendations")}
+          focused={selected === "StockRecommendations"}
         />
         <DrawerItem
           icon={({ color, size }) => (
@@ -162,11 +162,11 @@ export default function DrawerContent({ navigation }) {
             />
           )}
           label={"Real Estate"}
-          onPress={() => {}}
-          focused={false}
+          onPress={() => selectItem("RealEstateRecommendations")}
+          focused={selected === "RealEstateRecommendations"}
         />
       </Drawer.Section>
-    </View>
+    </ScrollView>
   );
 }
 
