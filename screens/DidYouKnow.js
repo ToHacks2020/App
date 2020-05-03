@@ -1,10 +1,12 @@
 import React from 'react';
 import {StyleSheet, ScrollView, View, Text, SectionList} from 'react-native';
+import HeaderBar from "../components/HeaderBar";
 
 export default class didYouKnow extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <HeaderBar pageName={"Did you know?"} />
         <SectionList
           sections={[
             
