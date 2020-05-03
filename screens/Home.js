@@ -6,7 +6,7 @@ import HeaderBar from "../components/HeaderBar";
 
 const user = {
   income: {
-    value: 14.3,
+    value: 14.32,
   },
   expense: {
     value: 145.3,
@@ -36,12 +36,12 @@ export default function Home() {
   }, []);
   return (
     <View>
-      <HeaderBar pageName={"Home"}/>
+      <HeaderBar pageName={"Home"} />
       <View style={styles.items}>
         <FlatList
-          data = {cardsData}
-          renderItem = {({item})=><BasicItem item={item}/>}
-          keyExtractor={item => item.type}
+          data={cardsData}
+          renderItem={({ item }) => <BasicItem item={item} />}
+          keyExtractor={(item) => item.type}
           numColumns={3}
         />
       </View>
@@ -51,6 +51,6 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   items: {
-    alignItems: 'center'
-  }
-})
+    alignItems: "center",
+  },
+});

@@ -10,12 +10,13 @@ export default function CompoundInterest() {
   const [interestRate, setInterestRate] = useState("");
   const [compoundInterest, setCompoundInterest] = useState([0, 0]);
   function calculateCompoundInterest() {
-    const result =
+    const result = (
       amount *
       Math.pow(
         1 + parseFloat(interestRate) / (parseFloat(compoundingTPY) * 100),
         parseFloat(compoundingTPY) * parseFloat(yearCount)
-      );
+      )
+    ).toFixed(2);
     isNaN(result)
       ? setCompoundInterest([0, 0])
       : setCompoundInterest([result, result - amount]);
@@ -57,7 +58,14 @@ export default function CompoundInterest() {
             onChangeText={(text) => setInterestRate(text)}
           />
           <View style={styles.result}>
-            <Text style={{fontWeight: 'bold', fontSize: 30}}>${compoundInterest[1]}</Text>
+            <Text
+              style={{ fontWeight: "bold", fontSize: 30, textAlign: "center" }}
+            >
+              Your retirement account will contain
+            </Text>
+            <Text style={{ fontWeight: "bold", fontSize: 30 }}>
+              ${compoundInterest[1]}
+            </Text>
           </View>
         </View>
       </View>
@@ -75,7 +83,7 @@ const styles = StyleSheet.create({
     width: 250,
   },
   result: {
-    alignItems: 'center',
-    marginTop: 50
-  }
+    alignItems: "center",
+    marginTop: 50,
+  },
 });
