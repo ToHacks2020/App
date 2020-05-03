@@ -76,7 +76,7 @@ export default function FinancialGoals() {
             />
           );
         }}
-        keyExtractor={item => item.id}
+        keyExtractor={item => item.id.toString()}
       />
       <View style={{ justifyContent: "flex-end", margin: 20 }}>
         <Button
