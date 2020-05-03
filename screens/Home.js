@@ -1,4 +1,4 @@
-import { Text, FlatList, View } from "react-native";
+import { Text, FlatList, View, StyleSheet } from "react-native";
 import { Card, List } from "react-native-paper";
 import React, { useState, useEffect } from "react";
 import BasicItem from "../components/BasicItem";
@@ -6,19 +6,19 @@ import HeaderBar from "../components/HeaderBar";
 
 const user = {
   income: {
-    count: 1,
+    value: 14.3,
   },
   expense: {
-    count: 1,
+    value: 145.3,
   },
   investments: {
-    count: 1,
+    value: 13.4,
   },
   assets: {
-    count: 1,
+    value: 1.5,
   },
   liabilities: {
-    count: 1,
+    value: 132.3,
   },
 };
 
@@ -29,7 +29,7 @@ export default function Home() {
     for (let [key, value] of Object.entries(user)) {
       arr.push({
         type: key,
-        count: value.count,
+        value: value.value,
       });
     }
     setCardsData(arr);
@@ -37,12 +37,20 @@ export default function Home() {
   return (
     <View>
       <HeaderBar pageName={"Home"}/>
-      <FlatList
-        data = {cardsData}
-        renderItem = {({item})=><BasicItem item={item}/>}
-        keyExtractor={item => item.type}
-        initialNumToRender={25}
-      />
+      <View style={styles.items}>
+        <FlatList
+          data = {cardsData}
+          renderItem = {({item})=><BasicItem item={item}/>}
+          keyExtractor={item => item.type}
+          numColumns={3}
+        />
+      </View>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  items: {
+    alignItems: 'center'
+  }
+})
