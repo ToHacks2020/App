@@ -84,18 +84,7 @@ export default function DrawerContent({ navigation }) {
           onPress={() => selectItem("Budgeting")}
           focused={selected === "Budgeting"}
         />
-        <DrawerItem
-          icon={({ color, size }) => (
-            <MaterialCommunityIcons
-              color={color}
-              size={size}
-              name={"calculator"}
-            />
-          )}
-          label={"Merge Budgets"}
-          onPress={() => selectItem("MergeBudgets")}
-          focused={selected === "MergeBudgets"}
-        />
+        
         <DrawerItem
           icon={({ color, size }) => (
             <MaterialCommunityIcons color={color} size={size} name={"bank"} />
@@ -141,31 +130,20 @@ export default function DrawerContent({ navigation }) {
           focused={selected === "Help"}
         />
       </Drawer.Section>
-      <Drawer.Section title={"Recommendations"}>
-        <DrawerItem
+      <Drawer.Section title={"User"}>
+      <DrawerItem
           icon={({ color, size }) => (
             <MaterialCommunityIcons
               color={color}
               size={size}
-              name={"credit-card"}
+              name={"calculator"}
             />
           )}
-          label={"Credit Cards"}
-          onPress={() => selectItem("CreditCardRecommendations")}
-          focused={selected === "CreditCardRecommendations"}
+          label={"Your Information"}
+          onPress={() => selectItem("MergeBudgets")}
+          focused={selected === "MergeBudgets"}
         />
-        <DrawerItem
-          icon={({ color, size }) => (
-            <MaterialCommunityIcons
-              color={color}
-              size={size}
-              name={"chart-areaspline"}
-            />
-          )}
-          label={"Stocks"}
-          onPress={() => selectItem("StockRecommendations")}
-          focused={selected === "StockRecommendations"}
-        />
+        
         <DrawerItem
           icon={({ color, size }) => (
             <MaterialCommunityIcons
@@ -174,9 +152,9 @@ export default function DrawerContent({ navigation }) {
               name={"office-building"}
             />
           )}
-          label={"Real Estate"}
-          onPress={() => selectItem("RealEstateRecommendations")}
-          focused={selected === "RealEstateRecommendations"}
+          label={"Log In"}
+          onPress={() => selectItem("logIn")}
+          focused={selected === "logIn"}
         />
       </Drawer.Section>
     </ScrollView>

@@ -12,9 +12,7 @@ import BankReconciliations from "./screens/BankReconciliations";
 import Analytics from "./screens/Analytics";
 import DidYouKnow from "./screens/DidYouKnow";
 import Help from "./screens/Help";
-import CreditCardRecommendations from "./screens/CreditCardRecommendations";
-import StockRecommendations from "./screens/StockRecommendations";
-import RealEstateRecommendations from "./screens/RealEstateRecommendations";
+import logIn from "./screens/logIn";
 
 const Drawer = createDrawerNavigator();
 
@@ -36,9 +34,7 @@ export default function App() {
         <Drawer.Screen name={"Analytics"} component={Analytics} />
         <Drawer.Screen name={"DidYouKnow"} component={DidYouKnow} />
         <Drawer.Screen name={"Help"} component={Help} />
-        <Drawer.Screen name={"CreditCardRecommendations"} component={CreditCardRecommendations} />
-        <Drawer.Screen name={"StockRecommendations"} component={StockRecommendations} />
-        <Drawer.Screen name={"RealEstateRecommendations"} component={RealEstateRecommendations} />
+        <Drawer.Screen name={"logIn"} component={logIn} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
